@@ -418,7 +418,6 @@ export default function WhiteboardRoom() {
               size="sm"
               onClick={() => {
                 setCurrentTool('rectangle');
-                {/*addShape('rectangle');*/}
               }}
             >
               <Square className="h-4 w-4" />
@@ -468,7 +467,6 @@ export default function WhiteboardRoom() {
 
           <Separator orientation="vertical" className="h-6" />
 
-          {/* Color Picker */}
           <div className="flex items-center space-x-2">
             <Palette className="h-4 w-4 text-gray-500" />
             <Select value={currentColor} onValueChange={setCurrentColor}>
@@ -499,14 +497,12 @@ export default function WhiteboardRoom() {
 
           <Separator orientation="vertical" className="h-6" />
 
-          {/* Actions */}
           <Button variant="outline" size="sm" onClick={clearCanvas}>
             <Trash2 className="h-4 w-4" />
           </Button>
         </div>
 
         <div className="flex items-center space-x-4">
-          {/* Online Users */}
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <Users className="h-4 w-4" />
             <span>{presence.length} online</span>
@@ -519,11 +515,9 @@ export default function WhiteboardRoom() {
         </div>
       </div>
 
-      {/* Canvas Container */}
       <div className="flex-1 relative overflow-hidden">
         <canvas ref={canvasRef} />
         
-        {/* Live Cursors */}
         {Array.from(cursors.values()).map((cursor) => (
           <div
             key={cursor.clientId}

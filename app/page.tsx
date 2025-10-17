@@ -20,7 +20,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="max-w-4xl w-full space-y-8">
-        {/* Hero Section */}
         <div className="text-center space-y-4">
           <h1 className="text-5xl font-bold text-gray-900">
             Sketch<span className="text-blue-600">Together</span>
@@ -31,7 +30,6 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Card className="text-center">
             <CardHeader>
@@ -70,7 +68,6 @@ export default function HomePage() {
           </Card>
         </div>
 
-        {/* CTA Section */}
         <div className="text-center">
           <Button 
             onClick={createNewBoard}
