@@ -120,7 +120,7 @@ function validTemplate(input: string | null): Template {
 function ensureId(obj: Obj) { if (!obj.id) obj.id = crypto.randomUUID(); return obj.id; }
 function snapshot(canvas: Canvas) {
   canvas.getObjects().forEach((object) => ensureId(object as Obj));
-  return JSON.stringify(canvas.toJSON(FabricObject.customProperties));
+  return JSON.stringify(canvas.toJSON());
 }
 function serialize(obj: Obj): Record<string, unknown> {
   ensureId(obj);
@@ -1583,9 +1583,10 @@ export default function BoardRoom() {
     canvas.on('object:modified', ({ target }) => {
       if (!target) return;
       const curve = target as Obj;
-      if (curve.vectorNodes?.length === 3 && curve instanceof Path) {
+      const vectorNodes = curve.vectorNodes;
+      if (vectorNodes?.length === 3 && curve instanceof Path) {
         const matrix = curve.calcTransformMatrix();
-        const nodes = curve.vectorNodes.map((node) => {
+        const nodes = vectorNodes.map((node) => {
           const position = util.transformPoint(new Point(
             node.x - curve.pathOffset.x,
             node.y - curve.pathOffset.y,

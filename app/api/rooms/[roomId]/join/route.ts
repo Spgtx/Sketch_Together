@@ -21,9 +21,18 @@ export async function POST(request: NextRequest, { params }: Context) {
     return jsonError('Too many attempts', 429, 60);
   }
   const raw = await readBodyLimited(request, 512).catch(() => '{}');
-  let token: string | undefined;
-  try { token = JSON.parse(raw || '{}').token; }
-  catch { return jsonError('Invalid JSON', 400); }
+  let token: unknown;
+  try {
+    const body: unknown = JSON.parse(raw || '{}');
+    token = body && typeof body === 'object' && 'token' in body
+      ? body.token
+      : undefined;
+  } catch {
+    return jsonError('Invalid JSON', 400);
+  }
+  if (typeof token !== 'string' || !token) {
+    return jsonError('Missing or invalid room access token', 400);
+  }
   const role = await roomRole(roomId, token);
   if (!role) return jsonError('Invalid or revoked room link', 403);
   const response = NextResponse.json({ role });
