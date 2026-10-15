@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 210">
+  <title>Colorful thoughts flying out of a brainstorm cloud</title>
+  <g stroke="#292A25" stroke-linejoin="round" stroke-width="5">
+    <path d="M82 62c-39-25-63 24-31 48-31 36 10 63 42 45 19 30 63 24 72-9 38 12 60-28 33-52 7-31-32-50-55-25C118 36 91 41 82 62Z"
+      fill="#C7E5C9"/>
+    <path d="m126 78 12 24 28 3-21 19 4 28-23-13-25 13 5-28-20-19 28-3Z"
+      fill="#F5CC6B"/>
+  </g>
+  <g stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M45 45 30 28m184 32 16-18M231 134l20 10" stroke="#E6855F"/>
+    <path d="M65 174 48 194m147-19 15 20" stroke="#426ED6"/>
+  </g>
+  <circle cx="223" cy="27" r="9" fill="#D3B9E0"/>
+  <circle cx="24" cy="139" r="6" fill="#E6A0B8"/>
+</svg>

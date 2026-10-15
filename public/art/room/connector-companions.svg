@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 112" role="img"
+  aria-label="Two friendly ink creatures connected by a curving pencil line">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M81 65 C122 6 206 117 254 45" stroke="#C77245" stroke-width="4"/>
+    <path d="M242 46 255 43 252 57" stroke="#C77245" stroke-width="4"/>
+    <path d="M45 78 C23 60 23 37 43 28 C62 18 83 33 88 52 C97 82 72 98 45 78Z"
+      stroke="#2C463F" stroke-width="2.8" fill="#F9D17C"/>
+    <path d="M36 32 27 19M53 25 52 14M71 31 80 16" stroke="#2C463F"
+      stroke-width="2.3"/>
+    <path d="M39 55q4-6 8 0m19-2q4-6 8 0M47 66q10 11 22-2" stroke="#2C463F"
+      stroke-width="2.2"/>
+    <path d="M267 66C249 44 259 16 282 15C303 13 319 29 314 54C311 77 283 86 267 66Z"
+      fill="#B4DDD3" stroke="#2C463F" stroke-width="2.8"/>
+    <path d="M273 45q4-5 7 0m16-3q4-5 7 0M278 54q11 10 21-1" stroke="#2C463F"
+      stroke-width="2.2"/>
+    <path d="M266 19 260 8M283 13 287 2M306 21 317 12" stroke="#2C463F"
+      stroke-width="2.2"/>
+    <path d="m141 26 3-12 3 12 12 3-12 3-3 12-3-12-12-3Z" fill="#E8A3BD"
+      stroke="#AF5475" stroke-width="1.6"/>
+    <path d="m198 81 3-8 3 8 8 3-8 3-3 8-3-8-8-3Z" fill="#B9C7F0"
+      stroke="#798BC7" stroke-width="1.6"/>
+    <path d="M16 95q22-7 31-2M303 96q12-6 24-3" stroke="#9B8571" stroke-width="1.5"/>
+  </g>
+</svg>

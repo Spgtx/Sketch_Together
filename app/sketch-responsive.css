@@ -1,0 +1,118 @@
+/* Breakpoints for one continuous paper world. */
+
+@media (max-width: 1100px) {
+  .world-width { width: min(100% - 60px, 1060px); }
+  .world-hero h1 { font-size: clamp(63px, 7.8vw, 90px); letter-spacing: -5px; }
+  .world-hero h1 em { letter-spacing: -5px; }
+  .world-hero-art { height: 500px; }
+  .world-hero { min-height: 600px; }
+  .world-nav { gap: 14px; }
+  .world-follow-line { opacity: 0.5; }
+  .world-pad-tray { gap: 18px; }
+}
+
+@media (max-width: 760px) {
+  .world-width { width: calc(100% - 38px); }
+  .world-header { height: 81px; gap: 6px; }
+  .world-logo { font-size: 19px; }
+  .world-logo-mark { width: 35px; }
+  .world-nav { display: none; }
+  .world-nav-button { font-size: 12px; padding: 11px 12px; }
+  .world-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding-top: 41px;
+    padding-bottom: 72px;
+  }
+  .world-eyebrow, .world-index { font-size: 9px; letter-spacing: 1.5px; }
+  .world-hero h1 { font-size: clamp(55px, 12vw, 83px); letter-spacing: -4px; }
+  .world-hero h1 em { letter-spacing: -4px; }
+  .world-hero-description { font-size: 16px; }
+  .world-hero-art { height: 340px; width: 100%; margin-top: 6px; }
+  .world-hero-character { width: 93%; left: 4%; }
+  .world-hero-orbit { width: 100%; left: 0; }
+  .world-hero-handwritten { bottom: 0; left: 11%; font-size: 16px; }
+  .world-hero-star { width: 55px; right: 5%; }
+  .world-hero-swoosh { width: 90px; left: 53%; bottom: -3%; }
+  .world-scroll-cue { bottom: 19px; }
+  .world-follow-line { display: none; }
+  .world-doodle h2, .world-stories h2, .world-templates h2,
+  .world-library h2, .world-finale h2 {
+    font-size: clamp(40px, 8vw, 61px);
+    letter-spacing: -2.5px;
+  }
+  .world-doodle-sprout { width: 75px; height: 75px; }
+  .world-pad-scene { height: 390px; margin-top: 13px; }
+  .world-pad-tray { gap: 12px; padding: 8px 14px 30px; }
+  .world-tool-label { display: none; }
+  .world-pad-inks button { width: 21px; height: 21px; }
+  .world-pad-whisper { left: 15%; top: 30%; font-size: 25px; }
+  .world-stories { padding-top: 95px; }
+  .world-story { min-height: 330px; }
+  .world-story-first { margin-top: 20px; }
+  .world-story-second { margin-top: 5px; }
+  .world-story-illustration-sprout img { min-width: 0; width: 95%; }
+  .world-story-illustration-sprout svg { width: 70px; }
+  .world-story-copy h3 { font-size: clamp(25px, 4.6vw, 38px); }
+  .world-story-copy p { font-size: 14px; }
+  .world-templates { padding-top: 70px; }
+  .world-templates-intro { align-items: start; flex-direction: column; gap: 12px; }
+  .world-template-collection { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .world-template-art { height: 160px; }
+  .world-template:nth-child(2), .world-template:nth-child(3),
+  .world-template:nth-child(4) { padding-top: 8px; }
+  .world-library { padding-top: 100px; }
+  .world-library-head { align-items: stretch; flex-direction: column; }
+  .world-library-search { width: 100%; }
+  .world-boards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .world-footer { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .world-header { height: 73px; }
+  .world-logo { font-size: 17px; gap: 4px; }
+  .world-nav-button { padding: 10px; }
+  .world-hero { padding-top: 25px; }
+  .world-hero h1 { font-size: clamp(51px, 13vw, 67px); margin: 18px 0 25px; }
+  .world-hero-actions { gap: 19px; }
+  .world-ink-button { padding: 16px 20px; font-size: 15px; }
+  .world-hero-secondary { font-size: 15px; }
+  .world-hero-art { height: 300px; }
+  .world-doodle-heading { align-items: flex-start; }
+  .world-doodle-sprout { width: 53px; height: 53px; }
+  .world-pad-scene { height: 430px; }
+  .world-pad-tray { padding: 4px 14px 32px; gap: 17px; }
+  .world-pad-tools { width: 100%; justify-content: center; }
+  .world-pad-inks { gap: 13px; }
+  .world-story { display: flex; flex-direction: column; align-items: stretch; }
+  .world-story-illustration-sprout { order: 1; height: 230px; text-align: center; }
+  .world-story-illustration-sprout img { height: 100%; width: auto; }
+  .world-story-first .world-story-copy { order: 2; }
+  .world-story-second { margin-top: 35px; }
+  .world-story-illustration-buddies { width: min(100%, 300px); }
+  .world-story-illustration-buddies img { max-height: 235px; }
+  .world-template-art { height: 125px; }
+  .world-template strong { font-size: 16px; }
+  .world-template-number { font-size: 9px; }
+  .world-templates h2 { font-size: 39px; }
+  .world-empty-library { gap: 2px; flex-direction: column; text-align: center; padding: 28px 0; }
+  .world-empty-library img { width: 170px; }
+  .world-boards { gap: 25px 15px; }
+  .world-board-open { padding: 7px; }
+  .world-board-open strong { font-size: 14px; }
+  .world-board-art { height: 95px; }
+  .world-board-label, .world-board-date { font-size: 8px; }
+  .world-finale { min-height: 420px; }
+  .world-finale-loop { width: 100%; right: -25%; top: 50px; }
+  .world-finale-star { width: 49px; left: 0; }
+  .world-footer { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world *, .world *::before, .world *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
