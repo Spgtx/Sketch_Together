@@ -7,6 +7,7 @@ import {
   docKey,
   editorsKey,
   metaKey,
+  validRoomId,
   type RoomMeta,
 } from '@/lib/server/room-security';
 import type { SyncDocument } from '@/lib/sync-model';
@@ -86,3 +87,46 @@ export async function backupRoom(id: string) {
   }
 }
 
+
+/**
+ * Checkpoint a bounded batch of dirty rooms for the scheduled maintenance job.
+ *
+ * Individual failures are returned instead of stopping the whole batch. Failed
+ * rooms remain in Redis's dirty set and can be retried on the next invocation.
+ */
+export type DirtyBackupResult =
+  | Awaited<ReturnType<typeof backupRoom>>
+  | { id: string; saved: false; error: string };
+
+export async function backupDirtyRooms(batchSize = 5): Promise<DirtyBackupResult[]> {
+  const redis = getRedis();
+  if (!redis) throw new Error('Redis is not configured');
+
+  // Keep maintenance requests bounded to avoid serverless timeouts.
+  const limit = Number.isFinite(batchSize)
+    ? Math.max(1, Math.min(10, Math.floor(batchSize)))
+    : 5;
+  const ids = await redis.zrange(dirtyKey, 0, limit - 1) as string[];
+  const results: DirtyBackupResult[] = [];
+
+  for (const id of ids) {
+    if (!validRoomId(id)) {
+      console.error('[backups:flush] Invalid dirty room ID');
+      results.push({ id, saved: false, error: 'Invalid room ID' });
+      continue;
+    }
+
+    try {
+      results.push(await backupRoom(id));
+    } catch (error) {
+      // Never log credentials, room access tokens, or backend error messages.
+      console.error('[backups:flush] Room backup failed', {
+        roomId: id,
+        category: error instanceof Error ? error.name : 'unknown',
+      });
+      results.push({ id, saved: false, error: 'Backup failed; retry on next run' });
+    }
+  }
+
+  return results;
+}

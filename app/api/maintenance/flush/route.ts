@@ -12,7 +12,13 @@ export async function POST(request: NextRequest) {
   }
   try {
     const results = await backupDirtyRooms();
-    return noStore(NextResponse.json({ processed: results.length, results }));
+    const pending = results.filter((item) => !item.saved).length;
+    return noStore(NextResponse.json({
+      processed: results.length,
+      backedUp: results.length - pending,
+      pending,
+      results,
+    }));
   } catch (error) {
     console.error('Durable backup failed', error);
     return jsonError('Durable backup failed; Redis remains authoritative', 503);

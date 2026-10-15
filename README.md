@@ -1,41 +1,42 @@
-# SketchTogether - Real-time Collaborative Whiteboard
+# v1.6.3 cloud/local mode fix
 
-A powerful and simple, real-time collaborative whiteboard application built with Next.js, Fabric.js, Ably, and Upstash Redis.
+See **README-CLOUD-MODE-FIX.md** for the new room creation and
+local-to-cloud migration workflow.
 
-## Features
+**v1.6.2 owner invitation fix:** See `README-OWNER-ACCESS-FIX.md` for the HTTP 403
+room-owner recovery fix and migration guidance.
 
-- **Rich Drawing Tools**: Pencil, rectangles, circles with color selection
-- **Real-time Collaboration**: Multiple users can draw simultaneously
-- **Live Cursors**: See other users' mouse positions in real-time
-- **Canvas Persistence**: All drawings are automatically saved and restored
-- **Responsive Design**: Works on desktop and tablet devices
-- **Shareable Links**: No signup required, just share the room URL
-- **Instant Setup**: Create a new board with one click
+# SketchTogether v1.6 — Secure Cloud Rooms
 
-## Getting Started
+The Endless Sketchpage/Art Studio UI, custom stickers, painting tools and
+smart connectors are preserved. New work: room authorization, rate limiting,
+object-level protected saving, private Realtime authorization and optional
+Supabase Storage/Postgres backup.
 
-### Prerequisites
+**Start with [README-SECURE-CLOUD.md](README-SECURE-CLOUD.md).**
 
-1. Node.js 18+ installed
-2. An Ably account for real-time features
-3. An Upstash Redis database for persistence
+```bash
+npm install
+npm test
+npm run typecheck
+npm run build
+npm run dev
+```
 
-### Installation
+Existing v1.5 room IDs have **no secure owner secret**. They are not silently
+migrated or made public. Open them through the homepage on a browser with its
+local saved artwork to clone the local copy into a new private cloud room.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Spgtx/Sketch_Together.git
-   cd Sketch_Together
-   ```
+The API configuration flags only indicate credentials, not successful writes.
+Check a real room's Redis sync response and its optional Supabase backup status
+before claiming durable persistence. The database backup job requires separate
+credentials and scheduled execution.
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+All guest edit links remain bearer credentials. Do not use private client artwork
+for a public beta until rate limits and Supabase RLS are configured and tested.
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+## v1.6.4 Redis HTTP 500 fix
+
+See `README-REDIS-500-FIX.md`. Run `npm run redis:check` to verify
+real Redis connectivity and commands before trying to create cloud rooms.
