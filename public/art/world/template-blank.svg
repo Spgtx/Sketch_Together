@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 210">
+  <title>A free blue pencil line</title>
+  <path d="M31 138C56 15 171 20 191 104c21 96-112 97-113 33-2-34 44-43 52-8"
+    fill="none" stroke="#456DDD" stroke-width="14" stroke-linecap="round"/>
+  <path d="M200 40q16-23 31-4m-10 24 25-3" fill="none" stroke="#E27C5C"
+    stroke-width="7" stroke-linecap="round"/>
+  <path d="M183 158q33 22 50-5" fill="none" stroke="#268971"
+    stroke-width="7" stroke-linecap="round"/>
+  <circle cx="68" cy="51" r="9" fill="#F5D576" stroke="#292A25" stroke-width="4"/>
+</svg>

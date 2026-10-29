@@ -1,0 +1,265 @@
+.connector-style-picker p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #746b5c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.room-sync-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px dashed #aba08d;
+  border-radius: 10px 17px 9px 13px;
+  background: #f9f4e8;
+}
+
+.room-sync-controls button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: #5e5446;
+  font-size: 11px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+}
+
+.room-sync-controls button[aria-pressed="true"] {
+  background: #315f50;
+  color: white;
+}
+
+.room-sync-alert {
+  position: absolute;
+  z-index: 40;
+  left: 50%;
+  bottom: 86px;
+  transform: translateX(-50%);
+  width: min(520px, calc(100% - 32px));
+  padding: 15px 17px;
+  background: #ffe6ce;
+  border: 2px solid #b85c36;
+  box-shadow: 4px 5px 0 #4c3c32;
+  color: #3b2a21;
+  border-radius: 9px 18px 10px 14px;
+}
+
+.room-sync-alert strong { display: block; margin-bottom: 4px; }
+
+.room-sync-alert p { margin: 4px 0 12px; font-size: 13px; }
+
+.room-sync-alert div { display: flex; flex-wrap: wrap; gap: 9px; }
+
+.room-sync-alert button {
+  background: white;
+  border: 1px solid #94705b;
+  padding: 7px 9px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .room-sync-controls { order: 3; }
+  .room-sync-controls button { padding: 6px; }
+}
+
+.connector-picker-wrap { margin: 5px 0 18px; }
+
+.connector-doodle {
+  display: block;
+  width: min(260px, 100%);
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+@media (max-width: 820px) {
+  .room-sync-controls { display: none; }
+}
+
+/* The art drawer uses tools instead of generic feature cards. */
+
+.art-tools {
+  display: grid;
+  gap: 11px;
+  padding-bottom: 15px;
+}
+
+.art-tools-intro {
+  margin: 2px 0;
+  color: #5b574d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.art-brush-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.art-brush {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  min-height: 97px;
+  padding: 9px;
+  border: 1.5px solid #b8ac95;
+  border-radius: 7px 13px 8px 10px;
+  background: #f8f3e7;
+  color: #292722;
+  cursor: pointer;
+  text-align: left;
+  transition: transform .14s ease, background .14s ease;
+}
+
+.art-brush:hover { transform: translateY(-2px) rotate(-1deg); }
+
+.art-brush.active {
+  border-color: #302d25;
+  background: #f7df9f;
+  box-shadow: 2px 3px 0 #302d25;
+}
+
+.art-brush strong { font-size: 12px; }
+
+.art-brush small { color: #756c5d; font-size: 10px; line-height: 1.35; }
+
+.art-brush svg { width: 100%; height: 29px; }
+
+.art-brush .brush-mark.ink { color: #1d3961; }
+
+.art-brush .brush-mark.marker { color: #d45d76; }
+
+.art-brush .brush-mark.spray { color: #637e60; }
+
+.art-brush .brush-mark.pressure { color: #a15736; }
+
+.art-value-row,
+.art-fill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.art-value-row input { flex: 1; min-width: 0; accent-color: #b14f43; }
+
+.art-value-row output { font-size: 12px; font-weight: 800; min-width: 38px; }
+
+.art-fill-row input[type='color'] { width: 42px; height: 35px; cursor: pointer; }
+
+.art-fill-row button {
+  padding: 8px 10px;
+  color: #292722;
+  background: #f4ead4;
+  border: 1px solid #a59d8c;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.art-fill-row button[aria-pressed='true'] { outline: 2px solid #b14f43; }
+
+.art-fill-row span { color: #7b7466; font-size: 10px; }
+
+.art-node-editor { border-top: 1px dashed #bfb7a6; padding-top: 8px; }
+
+.art-node-editor h3 { font-size: 15px; margin: 4px 0; }
+
+.art-node-editor p { font-size: 11px; color: #716758; margin-bottom: 10px; }
+
+.art-node-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.art-node-row strong { width: 50px; flex: 0 0 50px; font-size: 11px; }
+
+.art-node-row label { display: grid; gap: 3px; flex: 1; min-width: 0; font-size: 10px; }
+
+.art-node-row input {
+  width: 100%;
+  padding: 6px 4px;
+  border: 1px solid #c2b6a4;
+  border-radius: 4px;
+  background: #fffbf1;
+  font: inherit;
+}
+
+.studio .tool-rail { max-height: calc(100dvh - 182px); overflow-y: auto; }
+
+@media (max-width: 700px) {
+  .studio .tool-rail { max-height: unset; overflow-x: auto; overflow-y: hidden; }
+  .art-brush-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.art-workshop-illustration {
+  width: min(100%, 300px);
+  display: block;
+  max-height: 105px;
+  margin: 0 auto 6px;
+  object-fit: contain;
+}
+
+/* Keep the larger brush and node editors reachable on shorter screens. */
+
+.studio .scrapbook-properties {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio .scrapbook-properties .property-tab-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+/* v1.4: original paper-and-ink raster studio, no gradient surfaces. */
+
+.raster-stroke-preview,
+.curve-handle-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.curve-handle-overlay { z-index: 8; overflow: visible; }
+
+.curve-drag-handle {
+  pointer-events: all;
+  cursor: grab;
+  touch-action: none;
+  filter: drop-shadow(1px 2px 0 #27251f33);
+}
+
+.curve-drag-handle:active { cursor: grabbing; }
+
+.raster-illustration {
+  width: 100%;
+  max-height: 138px;
+  object-fit: contain;
+  margin-block: 4px 10px;
+}
+
+.raster-studio { display: flex; flex-direction: column; gap: 10px; }
+
+.raster-studio input[type='range'] { width: 100%; accent-color: #bc624c; }
+
+.raster-studio input[type='color'] {
+  height: 38px;
+  width: 58px;
+  background: #fffaf0;
+  border: 1px solid #88806d;
+  border-radius: 5px;
+  padding: 3px;
+}

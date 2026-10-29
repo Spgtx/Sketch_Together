@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 210">
+  <title>A moon, sun, and hand-drawn reflection marks</title>
+  <path d="M73 30c-54 6-65 81-15 111 27 17 66 5 73-13-49 13-83-55-58-98Z"
+    fill="#C4BFE6" stroke="#292A25" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="174" cy="94" r="43" fill="#F7D273" stroke="#292A25" stroke-width="6"/>
+  <g stroke="#E68D68" stroke-width="6" stroke-linecap="round">
+    <path d="M174 30V10m62 80h20m-26-41 13-14m-69 114v20"/>
+  </g>
+  <path d="M54 167q28-24 56 0t58 0 63 0" fill="none" stroke="#2E967E"
+    stroke-width="8" stroke-linecap="round"/>
+  <g fill="#292A25"><circle cx="160" cy="91" r="4"/><circle cx="189" cy="91" r="4"/></g>
+  <path d="M163 108q12 11 23 0" fill="none" stroke="#292A25" stroke-width="4"
+    stroke-linecap="round"/>
+</svg>

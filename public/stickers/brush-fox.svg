@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Brush fox</title>
+  <g stroke="#3B302C" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 77 33 13l58 38L155 12l-6 74" fill="#F49B6D" stroke-width="5"/>
+    <path d="M48 63 43 29l31 28M135 56l14-29-2 40" fill="#FFDFBA" stroke-width="2"/>
+    <path d="M37 77q12-35 63-30 56-4 66 33-4 53-64 68-52-14-65-71Z" fill="#F7A974" stroke-width="5"/>
+    <path d="M38 80q14 40 62 52 53-13 64-52l-8 47-54 35-57-38Z" fill="#FFEDC9" stroke-width="4"/>
+    <ellipse cx="75" cy="87" rx="5" ry="8" fill="#2B2C2C" stroke="none"/>
+    <ellipse cx="127" cy="87" rx="5" ry="8" fill="#2B2C2C" stroke="none"/>
+    <path d="M95 108q5 3 12 0l-6 7Z" fill="#3B302C" stroke-width="2"/>
+    <path d="M100 115v5m0 0q-10 10-18 0m18 0q10 10 19 0" fill="none" stroke-width="2.5"/>
+    <path d="M53 148q-22 6-18 21 6 16 37 0M146 149q31-6 36 15-1 13-19 8" fill="none" stroke="#F49B6D" stroke-width="12"/>
+    <path d="m34 163-11-25 8-4 11 23" fill="#EFCD72" stroke-width="3"/>
+    <path d="m23 138-4-14q4-9 12-1l0 11" fill="#A6BBD9" stroke-width="3"/>
+  </g>
+  <path d="m166 38 4-11 4 11 11 4-11 4-4 11-4-11-11-4Z" fill="#B6D9C1"/>
+</svg>

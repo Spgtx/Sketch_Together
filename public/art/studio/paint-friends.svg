@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 170" fill="none">
+  <title>Paint buddies making an ink puddle</title>
+  <path d="M13 146c59-10 114-5 187-6 85-4 138-5 183 2" stroke="#302d29" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 12"/>
+  <path d="M89 118c-7-22 7-46 18-54l23-38c12-17 37-16 46 0l22 38c15 22 11 52-4 62-16 15-94 12-105-8Z" fill="#f7c95e" stroke="#292722" stroke-width="4"/>
+  <path d="M125 67l16-30 15 32" stroke="#292722" stroke-width="4" stroke-linecap="round"/>
+  <path d="M121 92c2-4 7-6 11-2m36 2c-3-4-7-4-10-2" stroke="#292722" stroke-width="3" stroke-linecap="round"/>
+  <path d="M139 104q8 10 17 0" stroke="#292722" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 106c21-41 49-59 80-42 18 10 17 35-1 49-24 20-54 15-79-7Z" fill="#a7cfbd" stroke="#292722" stroke-width="4"/>
+  <path d="M223 88l8 3m31-4 8-1m-37 18q11 10 21-1" stroke="#292722" stroke-width="3" stroke-linecap="round"/>
+  <path d="M72 136q34-28 70-1 31 24 80 3 30-14 69 1" fill="#b8c3eb" stroke="#686fa6" stroke-width="4" stroke-linecap="round"/>
+  <path d="m58 51 6-18 10 18 17 5-18 8-8 18-9-18-17-8 19-5Z" fill="#e38c75" stroke="#292722" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m314 38 13-10 3 17 19 3-14 12 1 16-18-7-13 10 2-22-11-8 18-11Z" fill="#f7c95e" stroke="#292722" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M23 102q18-16 34 0m290-8q17-18 34-3" stroke="#d2785e" stroke-width="4" stroke-linecap="round"/>
+</svg>

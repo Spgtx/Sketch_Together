@@ -1,0 +1,241 @@
+/* Free-form idea stories, illustrated templates, and the local board shelf. */
+
+/* Loose visual stories, like drawings living in the margins. */
+
+.world-stories {
+  padding-top: 155px;
+  scroll-margin-top: 40px;
+}
+
+.world-stories h2 {
+  margin: 10px 0;
+}
+
+.world-stories h2 span {
+  font: italic 1.08em Georgia, serif;
+  color: var(--world-mint);
+}
+
+.world-story {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 395px;
+  align-items: center;
+}
+
+.world-story-first {
+  margin-top: 36px;
+}
+
+.world-story-second {
+  margin-top: -42px;
+}
+
+.world-story-illustration {
+  position: relative;
+}
+
+.world-story-illustration-sprout img {
+  width: clamp(240px, 27vw, 350px);
+  max-width: 85%;
+  transform: rotate(-12deg);
+}
+
+.world-story-illustration-sprout svg {
+  width: 185px;
+  position: absolute;
+  left: 45%;
+  bottom: 12%;
+  transform: rotate(3deg);
+}
+
+.world-story-copy {
+  padding: 20px 0;
+}
+
+.world-story-copy h3 {
+  font: italic clamp(31px, 3.4vw, 47px) Georgia, serif;
+  letter-spacing: -1.8px;
+  line-height: 1.13;
+  margin: 16px 0 14px;
+}
+
+.world-story-copy p {
+  max-width: 390px;
+  font-size: 16px;
+  color: #5d5d54;
+  line-height: 1.65;
+}
+
+.world-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  background: none;
+  border: none;
+  padding: 7px 0;
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.world-story-illustration-buddies {
+  justify-self: center;
+  width: min(100%, 470px);
+}
+
+.world-story-illustration-buddies img {
+  width: 100%;
+  transform: rotate(5deg);
+}
+
+.world-story-illustration-buddies span {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: 13%;
+  font: italic 20px Georgia, serif;
+  transform: rotate(-8deg);
+  color: var(--world-red);
+}
+
+/* Templates are illustrations with labels, not uniform boxed cards. */
+
+.world-templates {
+  padding-top: 127px;
+  scroll-margin-top: 32px;
+}
+
+.world-templates-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin: 18px 0 18px;
+}
+
+.world-templates-intro p {
+  max-width: 265px;
+  padding-bottom: 10px;
+}
+
+.world-template-collection {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.world-template {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 0;
+  background: none;
+  width: 100%;
+  padding: 8px 3px 17px;
+  min-width: 0;
+  transition: transform 0.2s ease;
+}
+
+.world-template:nth-child(2) {
+  padding-top: 45px;
+}
+
+.world-template:nth-child(3) {
+  padding-top: 19px;
+}
+
+.world-template:nth-child(4) {
+  padding-top: 51px;
+}
+
+.world-template:hover,
+.world-template:focus-visible {
+  transform: translateY(-9px) rotate(-1deg);
+}
+
+.world-template-art {
+  display: grid;
+  place-items: center;
+  height: 227px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.world-template-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.world-template-number {
+  color: #aa604b;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  font-weight: 850;
+  margin-bottom: 11px;
+}
+
+.world-template strong {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 19px;
+  letter-spacing: -0.7px;
+  line-height: 1.2;
+}
+
+.world-template-prompt {
+  font-size: 12px;
+  color: #666257;
+  line-height: 1.45;
+  margin-top: 9px;
+}
+
+/* Actual saved pages can be paper-shaped, because they really are pages. */
+
+.world-library {
+  padding-top: 170px;
+  scroll-margin-top: 40px;
+}
+
+.world-library-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.world-library h2 {
+  margin: 12px 0;
+}
+
+.world-library-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--world-ink);
+}
+
+.world-library-search input {
+  width: 100%;
+  border: none;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  color: var(--world-ink);
+}
+
+.world-empty-library {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: min(10vw, 140px);
+}

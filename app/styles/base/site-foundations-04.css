@@ -1,0 +1,119 @@
+@media (max-width:650px) {
+  .studio-header {
+    height: 58px;
+  }
+
+  .board-name {
+    width: 135px;
+    max-width: 37vw;
+    font-size: 12px;
+  }
+
+  .studio-logo {
+    display: none;
+  }
+
+  .header-separator {
+    display: none;
+  }
+
+  .live-badge {
+    display: none;
+  }
+
+  .connection-note {
+    display: none;
+  }
+
+  .tool-rail {
+    top: auto;
+    left: 8px;
+    bottom: 70px;
+    right: 8px;
+    transform: none;
+    flex-direction: row;
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    justify-content: flex-start;
+  }
+
+  .tool-rail .icon-btn {
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .tool-rail .rail-divider {
+    width: 1px;
+    height: 31px;
+    margin: 4px 1px;
+    flex-shrink: 0;
+  }
+
+  .right-panel {
+    top: 10px;
+    right: 9px;
+    width: 174px;
+    padding: 12px;
+    opacity: .97;
+  }
+
+  .panel-heading {
+    margin-bottom: 10px;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(6,1fr);
+    gap: 6px;
+  }
+
+  .color-swatch {
+    height: 20px;
+    width: 20px;
+  }
+
+  .right-panel .panel-hint {
+    display: none;
+  }
+
+  .studio-bottom {
+    left: 8px;
+    right: 8px;
+    bottom: 10px;
+  }
+
+  .tip-badge {
+    display: none;
+  }
+
+  .file-menu {
+    right: 8px;
+    top: 52px;
+  }
+}
+
+.right-panel.panel-closed {
+  display: none;
+}
+
+.palette-toggle.palette-open {
+  background: #f7dd9b;
+  border-color: var(--ink);
+}
+
+.palette-toggle:not(.palette-open):hover {
+  background: #f4e9d7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

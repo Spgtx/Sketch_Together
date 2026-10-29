@@ -1,0 +1,238 @@
+/* Base styles and canvas editor. Landing styles live in scrapbook.css. */
+
+:root {
+  --paper: #f5f2eb;
+  --ink: #292923;
+  --muted: #6c6b64;
+  --line: #d9d4c9;
+  --accent: #e75436;
+  --white: #fffdfa;
+  --mint: #c9ddcb;
+  --yellow: #f4d77b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e75436;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #f4d77b;
+  color: #292923;
+}
+
+.studio {
+  height: 100dvh;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  background: #efeee9;
+  overflow: hidden;
+}
+
+.studio-header {
+  height: 68px;
+  flex-shrink: 0;
+  background: #fffefa;
+  border-bottom: 1px solid #dedad2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 8;
+}
+
+.studio-left,
+.studio-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.studio-left {
+  flex: 1;
+}
+
+.studio-right {
+  justify-content: flex-end;
+}
+
+.studio-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 850;
+  font-size: 17px;
+  letter-spacing: -.8px;
+}
+
+.studio-logo span:first-child {
+  background: var(--accent);
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  color: #fff;
+  font-family: Georgia,serif;
+  font-style: italic;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+.header-separator {
+  height: 25px;
+  width: 1px;
+  background: var(--line);
+  margin: 0 7px;
+}
+
+.board-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.board-name {
+  width: 230px;
+  max-width: 28vw;
+  padding: 2px 5px;
+  margin-left: -5px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-weight: 800;
+  color: var(--ink);
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+
+.board-name:hover,
+.board-name:focus {
+  border-color: var(--line);
+  border-radius: 3px;
+}
+
+.save-caption {
+  font-size: 10px;
+  color: #77736d;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7f9e83;
+  display: inline-block;
+}
+
+.status-dot.unsaved {
+  background: #e3ad53;
+}
+
+.icon-btn {
+  height: 36px;
+  width: 36px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 7px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.icon-btn:hover:not(:disabled) {
+  background: #f0e9dd;
+}
+
+.icon-btn.selected {
+  background: var(--ink);
+  color: #fff;
+}
+
+.icon-btn:disabled {
+  opacity: .3;
+}
+
+.icon-btn.bordered {
+  border-color: var(--line);
+}
+
+.studio-action {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 10px 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.studio-action:hover {
+  border-color: var(--ink);
+}
+
+.studio-action.primary {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.live-badge {
+  font-size: 11px;
+  color: #536d57;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 170" fill="none">
+  <title>Brush workshop doodle: three illustrated brushes drawing their own marks</title>
+  <path d="M12 132c52-36 72 19 123-17s67-11 105-42 80 23 138-42"
+    stroke="#d7c4a1" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 11"/>
+  <g transform="translate(35 30) rotate(-22 25 56)">
+    <path d="M14 17Q23 5 34 17L39 97Q24 116 9 97Z" fill="#e9b54d"
+      stroke="#302b26" stroke-width="3"/>
+    <path d="M12 29h25M10 88h29" stroke="#302b26" stroke-width="3"/>
+    <path d="M14 17L24 2 34 17Z" fill="#efd4ab" stroke="#302b26" stroke-width="3"/>
+    <path d="M19 8l5-6 5 6" stroke="#302b26" stroke-width="2"/>
+    <circle cx="17" cy="52" r="2.3" fill="#302b26"/>
+    <circle cx="30" cy="52" r="2.3" fill="#302b26"/>
+    <path d="M18 62q6 7 12 0" stroke="#302b26" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(168 12) rotate(17 20 70)">
+    <path d="M13 29Q21 22 31 29L34 110H10Z" fill="#94b8dd" stroke="#302b26" stroke-width="3"/>
+    <path d="M11 29l-1-15 8-7h7l8 7-2 15" fill="#465da4"
+      stroke="#302b26" stroke-width="3"/>
+    <path d="M13 42h20" stroke="#302b26" stroke-width="3"/>
+    <circle cx="18" cy="64" r="2.4" fill="#302b26"/>
+    <circle cx="28" cy="64" r="2.4" fill="#302b26"/>
+    <path d="M19 76q5-5 9 0" stroke="#302b26" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 98h20" stroke="#302b26" stroke-width="3"/>
+  </g>
+  <g transform="translate(268 20) rotate(-14 20 60)">
+    <rect x="10" y="23" width="29" height="87" rx="9" fill="#edb9bb"
+      stroke="#302b26" stroke-width="3"/>
+    <path d="M16 23V10Q24 2 33 10v13" fill="#d86f8c" stroke="#302b26" stroke-width="3"/>
+    <path d="M12 88h25" stroke="#302b26" stroke-width="3"/>
+    <circle cx="20" cy="51" r="2.2" fill="#302b26"/>
+    <circle cx="31" cy="51" r="2.2" fill="#302b26"/>
+    <path d="M19 60q6 6 12 0" stroke="#302b26" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <path d="M71 142q28-36 56-1t49-1" stroke="#df9955" stroke-width="6"
+    stroke-linecap="round"/>
+  <path d="M199 146q30-37 55-3" stroke="#3b709e" stroke-width="3"
+    stroke-linecap="round"/>
+  <path d="M301 140q13-19 34-5" stroke="#be6184" stroke-width="10"
+    stroke-linecap="round" opacity=".4"/>
+  <path d="m135 41 5-10 5 10 10 5-10 5-5 10-5-10-10-5Z"
+    fill="#fff1b1" stroke="#302b26" stroke-width="2"/>
+</svg>

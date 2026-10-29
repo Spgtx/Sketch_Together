@@ -1,0 +1,237 @@
+.brush-mode-picker button {
+  border: 1px solid #cfc6b5;
+  color: #33302b;
+  background: #fffdf7;
+  padding: 10px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 8px 11px 7px 8px;
+}
+
+.brush-mode-picker button.active {
+  border-color: #302e29;
+  background: #e5efc8;
+  box-shadow: 2px 2px 0 #302e29;
+}
+
+.marker-glyph {
+  color: #d67c69;
+  font-size: 23px;
+  line-height: 12px;
+}
+
+.studio .sticker-shelf-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.studio .sticker-option {
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  padding: 6px 1px;
+}
+
+.studio .sticker-option:nth-child(4n+1) {
+  transform: rotate(-3deg);
+}
+
+.studio .sticker-option:nth-child(4n+3) {
+  transform: rotate(4deg);
+}
+
+.studio .sticker-option:hover:not(:disabled) {
+  background: #f7eacb;
+  transform: translateY(-3px) rotate(0);
+}
+
+.studio .sticker-option img {
+  width: 72px;
+  max-width: 90%;
+  height: 66px;
+}
+
+.studio .sticker-option span {
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.studio .tip-badge {
+  font-size: 11px;
+  border: 1px solid #cbbfac;
+  background: #fffbec;
+  color: #655b4d;
+  border-radius: 30px;
+  box-shadow: 2px 3px 0 #e0d7c8;
+}
+
+.studio .zoom-controls {
+  border: 1.5px solid #332e27;
+  border-radius: 12px;
+  box-shadow: 3px 4px 0 #302e29;
+  background: #fffbf0;
+}
+
+.room-empty-hint {
+  position: absolute;
+  left: 49%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+  text-align: center;
+  opacity: .8;
+  width: min(65vw, 420px);
+  z-index: 2;
+}
+
+.room-empty-hint img {
+  width: clamp(125px, 20vw, 210px);
+  max-height: 180px;
+  object-fit: contain;
+  transform: rotate(-9deg);
+}
+
+.room-empty-hint p {
+  margin: 7px 0 5px;
+  font: italic 27px Georgia, serif;
+  color: #3a3c32;
+}
+
+.room-empty-hint span {
+  color: #746c5e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.room-reactions {
+  position: absolute;
+  right: min(30%, 335px);
+  bottom: 18%;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.room-reaction {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 44px;
+  filter: drop-shadow(2px 3px 0 #24221b55);
+  animation: room-pop 1.7s ease-out forwards;
+}
+
+.room-reaction:nth-child(2n) {
+  --drift: -58px;
+}
+
+.room-reaction:nth-child(2n+1) {
+  --drift: 34px;
+}
+
+@keyframes room-pop {
+  0% { opacity: 0; transform: translate(0, 20px) scale(.3) rotate(-18deg); }
+  16% { opacity: 1; transform: translate(0, -9px) scale(1.1); }
+  100% { opacity: 0; transform: translate(var(--drift, 10px), -170px) rotate(20deg); }
+}
+
+.layers-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+
+.layers-summary span {
+  font-size: 10px;
+  color: #837968;
+  text-align: right;
+}
+
+.layers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 32vh;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.layer-row {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #e2d8c9;
+  border-radius: 7px;
+  background: #fffefb;
+}
+
+.layer-row.is-selected {
+  background: #f7e8bd;
+  border-color: #928261;
+}
+
+.layer-pick {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-align: left;
+  border: none;
+  padding: 6px 4px;
+  background: transparent;
+}
+
+.layer-index {
+  font-size: 9px;
+  color: #b18460;
+  font-family: Georgia, serif;
+  align-self: flex-start;
+}
+
+.layer-description {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.layer-description strong {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  color: #39342e;
+}
+
+.layer-description small {
+  font-size: 9px;
+  color: #796d5e;
+}
+
+.layer-buttons {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.layer-buttons button {
+  background: transparent;
+  border: none;
+  width: 19px;
+  height: 29px;
+  padding: 0;
+  font-size: 12px;
+}

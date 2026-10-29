@@ -1,0 +1,234 @@
+.world-empty-library img {
+  width: clamp(190px, 24vw, 300px);
+  transform: rotate(-11deg);
+  animation: world-bob 7s ease-in-out infinite;
+}
+
+.world-empty-library h3 {
+  font-size: clamp(30px, 3.5vw, 48px);
+  letter-spacing: -1.7px;
+  line-height: 1.08;
+  margin: 15px 0;
+}
+
+.world-empty-library p {
+  color: #69665e;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.world-hand-note {
+  font: italic 18px Georgia, serif;
+  color: #af6852;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.world-boards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px 23px;
+  padding: 55px 6px 26px;
+}
+
+.world-board {
+  position: relative;
+  background: #f1eacb;
+  border: 1.5px solid #514e43;
+  box-shadow: 5px 7px 0 #33312a14;
+  min-width: 0;
+  transform: rotate(-3deg);
+  transition: transform 0.2s ease;
+}
+
+.world-board:nth-child(2n) {
+  transform: rotate(3deg) translateY(11px);
+  background: #dce6da;
+}
+
+.world-board:nth-child(3n) {
+  background: #e8d9e4;
+  transform: rotate(-1deg) translateY(-10px);
+}
+
+.world-board:nth-child(4n) {
+  background: #dce7f0;
+  transform: rotate(2deg);
+}
+
+.world-board:hover,
+.world-board:focus-within {
+  transform: rotate(0deg) translateY(-7px);
+}
+
+.world-board::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 38%;
+  height: 22px;
+  width: 58px;
+  background: #ebbc85a8;
+  transform: rotate(-4deg);
+  z-index: 2;
+}
+
+.world-board-open {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 12px 15px 8px;
+}
+
+.world-board-art {
+  width: 100%;
+  height: 125px;
+  display: grid;
+  place-items: center;
+}
+
+.world-board-art img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.world-board-label,
+.world-board-date {
+  color: #625e53;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.world-board-open strong {
+  font-size: 17px;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.world-board-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.world-board-utilities {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 7px 9px;
+}
+
+.world-board-utilities button {
+  border: 0;
+  width: 31px;
+  height: 30px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.world-board-utilities button:hover {
+  background: #ffffff9e;
+}
+
+.world-library-feedback,
+.world-library-noresults {
+  margin-top: 20px !important;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.world-library-fineprint {
+  font-size: 11px;
+  max-width: 750px;
+  margin-top: 20px !important;
+  color: #817b70;
+  line-height: 1.5;
+}
+
+/* Final invitation is an ink gesture, not a full-width CTA banner. */
+
+.world-finale {
+  min-height: 460px;
+  padding: 70px 0 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-finale-copy {
+  width: min(650px, 90%);
+  text-align: center;
+  z-index: 1;
+}
+
+.world-finale h2 {
+  margin: 19px 0 11px;
+}
+
+.world-finale-copy > p {
+  font: italic 23px Georgia, serif;
+  color: #56574c;
+}
+
+.world-finale-link {
+  margin-top: 25px;
+  font-size: 17px;
+}
+
+.world-finale-loop {
+  width: min(580px, 65%);
+  position: absolute;
+  top: 27px;
+  right: 8%;
+  transform: rotate(8deg);
+  opacity: 0.85;
+}
+
+.world-finale-star {
+  position: absolute;
+  width: 82px;
+  top: 12%;
+  left: 7%;
+  transform: rotate(-20deg);
+}
+
+.world-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  border-top: 1px dashed #c5bfb0;
+  padding-block: 24px 35px;
+  color: #605b51;
+  font-size: 12px;
+}
+
+.world-footer-brand {
+  font-size: 19px;
+  font-weight: 850;
+  letter-spacing: -0.8px;
+  color: var(--world-ink);
+}
+
+@keyframes world-bob {
+  0%, 100% { transform: translateY(0) rotate(4deg); }
+  50% { transform: translateY(-13px) rotate(1deg); }
+}
+
+/* Tiny custom characters connect the studio and the endless homepage. */
+
+.world-finale-moth {
+  position: absolute;
+  width: 118px;
+  right: 7%;
+  bottom: 15%;
+  transform: rotate(14deg);
+  pointer-events: none;
+}

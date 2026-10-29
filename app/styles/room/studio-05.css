@@ -1,0 +1,287 @@
+.raster-studio select,
+.raster-add,
+.raster-actions button {
+  width: 100%;
+  min-height: 40px;
+  border: 1.5px solid #302d28;
+  border-radius: 7px;
+  background: #fffdf6;
+  color: #292721;
+  padding: 9px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.raster-add { background: #f5cc71; font-weight: 800; }
+
+.raster-add:disabled { cursor: not-allowed; opacity: .55; }
+
+.raster-layer-list { display: flex; flex-direction: column; gap: 7px; }
+
+.raster-layer-list button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 9px;
+  border: 1px solid #c8beab;
+  border-radius: 7px;
+  background: #fcfaf4;
+  text-align: left;
+  color: #25231f;
+  cursor: pointer;
+}
+
+.raster-layer-list button.selected {
+  background: #d9e9d9;
+  border-color: #417d6e;
+  box-shadow: 2px 3px 0 #417d6e26;
+}
+
+.raster-layer-list button small { margin-left: auto; font-size: 10px; }
+
+.raster-layer-icon { font-size: 20px; color: #a55c47; }
+
+.raster-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.curve-close-toggle { display: flex; align-items: center; gap: 7px; font-size: 12px; }
+
+@media (max-width: 650px) {
+  .curve-drag-handle { stroke-width: 3; }
+  .raster-actions { grid-template-columns: 1fr; }
+}
+
+.raster-layer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.raster-layer-actions button {
+  border: 1px solid #bcb09b;
+  background: #fffdfa;
+  color: #2e2b26;
+  border-radius: 6px;
+  padding: 8px 5px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.raster-layer-actions .raster-delete {
+  grid-column: 1 / -1;
+  border-color: #d99b91;
+  color: #9a3b2d;
+}
+
+/* Dedicated tool glyphs retain precise intent without a generic icon pack. */
+
+.studio .tool-rail .rail-slot {
+  position: relative;
+  display: flex;
+}
+
+.studio .tool-rail .rail-slot .icon-btn {
+  position: relative;
+}
+
+.rail-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 12;
+  opacity: 0;
+  left: calc(100% + 16px);
+  top: 50%;
+  transform: translate(-4px, -50%);
+  background: #2d2b28;
+  color: #fff8e7;
+  border-radius: 6px;
+  padding: 7px 9px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  transition: opacity .13s ease, transform .13s ease;
+}
+
+.studio .rail-slot .icon-btn:hover .rail-tooltip,
+.studio .rail-slot .icon-btn:focus-visible .rail-tooltip {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.studio .sticker-option:disabled {
+  opacity: .65;
+}
+
+.sticker-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fffdf8;
+  border: 1.5px solid #b5a997;
+  border-radius: 9px;
+  padding: 8px;
+}
+
+.sticker-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.sticker-categories {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 10px 0 12px;
+}
+
+.sticker-categories button {
+  border: 1px solid #c6b8a5;
+  background: #fff9ec;
+  color: #5d554a;
+  border-radius: 14px;
+  padding: 5px 9px;
+  font-size: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sticker-categories button.active {
+  background: #f4cd71;
+  border-color: #2d2b28;
+  color: #292723;
+  font-weight: 800;
+}
+
+.studio .raster-actions button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .rail-tooltip { display: none; }
+}
+
+.illustration-fill-presets {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin: 7px 0 15px;
+}
+
+.illustration-fill-presets button {
+  width: 27px;
+  height: 27px;
+  border: 2px solid #544e44;
+  border-radius: 42% 58% 48% 52%;
+  cursor: pointer;
+}
+
+.illustration-fill-presets button[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px #fffaf0, 0 0 0 4px #282923;
+}
+
+/* Private-room invitation required */
+
+.room-locked {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px;
+  text-align: center;
+  background: #fbf8ef;
+  color: #2d2a25;
+}
+
+.room-locked h1 {
+  margin: 0;
+  font-size: clamp(32px, 6vw, 60px);
+  letter-spacing: -0.05em;
+}
+
+.room-locked p { max-width: 440px; line-height: 1.6; }
+
+.room-locked a {
+  padding: 13px 19px;
+  border-radius: 8px;
+  background: #2d2a25;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* An invitation is never hidden behind a successful clipboard operation. */
+
+.room-share-result {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.room-share-result label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.room-share-result input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #b4aa94;
+  border-radius: 9px;
+  background: #fffdf7;
+  color: #25231f;
+  font: 0.85rem ui-monospace, SFMono-Regular, monospace;
+}
+
+.room-share-result p { margin: 0; font-size: 0.82rem; }
+
+/* v1.7: the Fabric viewport is independent of the maker's interface. */
+
+.studio .scrapbook-properties {
+  width: var(--inspector-width, 320px);
+  min-width: 230px;
+  max-width: min(490px, calc(100vw - 36px));
+  max-height: calc(100% - 110px);
+  overflow: auto;
+  resize: horizontal;
+  overscroll-behavior: contain;
+}
+
+.studio .tool-rail .icon-btn {
+  width: var(--tool-size, 44px);
+  height: var(--tool-size, 44px);
+  min-width: var(--tool-size, 44px);
+}
+
+.panel-heading-row { display: flex; align-items: center; justify-content: space-between; }
+
+.panel-close { border: 0; background: none; font-size: 24px; cursor: pointer; }
+
+.panel-resize { display: flex; gap: 12px; align-items: center;
+  font-size: 10px; color: #756b60; margin: 0 0 10px; }
+
+.panel-resize input { flex: 1; min-width: 0; accent-color: #ca805d; }
+
+.studio .property-tabs { overflow-x: auto; display: flex; scrollbar-width: thin; }
+
+.studio .property-tabs button { flex: 0 0 auto; min-width: 54px; padding: 10px 7px; }
+
+.rail-size-control { position: absolute; left: 20px; bottom: 58px; z-index: 6;
+  background: #fffaf0; border: 1px solid #444037; border-radius: 8px;
+  display: flex; align-items: center; gap: 5px; padding: 3px 7px;
+  font-size: 10px; }
+
+.rail-size-control input { width: 76px; accent-color: #d19b60; }
+
+.text-inspector, .vector-operations, .device-frames { display: grid; gap: 12px; }
+
+.text-inspector label { display: grid; gap: 5px; font-size: 11px; }

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 620">
+  <title>A curious scribble friend holding an oversized pencil</title>
+  <g stroke="#292A25" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M93 168C117 84 217 56 301 70c86-24 195 24 219 126 26 101-12 211-102 250-85 39-181 9-240-40-70-59-104-142-85-238Z"
+      fill="#F0BED0" stroke-width="9"/>
+    <path d="M127 163c-29-49-2-109 34-129M483 148c38-49 90-40 113-11"
+      fill="none" stroke-width="10"/>
+    <path d="M122 360C46 342 13 382 50 429c15 18 23 41 5 58M473 370c81-45 143-9 112 41-10 18-12 45 16 54"
+      fill="none" stroke-width="10"/>
+    <path d="M167 447c-14 40-51 69-88 64m267-47c15 48 54 83 89 69"
+      fill="none" stroke-width="11"/>
+    <path d="M211 158c58-79 192-43 212 43 15 65-20 111-80 137-50 22-65 46-50 71 12 22 38 30 58 21"
+      fill="none" stroke="#426ED6" stroke-width="21"/>
+    <path d="M122 219c-28 16-39 39-37 59" stroke-width="5" fill="none"/>
+    <path d="M533 207c24 18 28 39 22 66" stroke-width="5" fill="none"/>
+  </g>
+  <g transform="rotate(27 468 165)" stroke="#292A25" stroke-width="7" stroke-linejoin="round">
+    <path d="M424 23q0-14 15-14h57q14 0 14 14v258h-86Z" fill="#F8CD70"/>
+    <path d="M425 35h85v45h-85Z" fill="#E88172"/>
+    <path d="M424 281h86l-43 75Z" fill="#FFF0CF"/>
+    <path d="m455 335 12 21 12-21" fill="#292A25"/>
+    <path d="M441 84v174" stroke="#E4A244" stroke-width="5" fill="none"/>
+    <path d="M424 24q2-25 25-25h39q22 0 22 25" fill="none"/>
+  </g>
+  <g fill="none" stroke="#E47C57" stroke-width="7" stroke-linecap="round">
+    <path d="M54 107 20 90M79 71 66 34M536 390l29 17M507 432l11 36"/>
+  </g>
+  <g fill="none" stroke="#2E8C72" stroke-width="6" stroke-linecap="round">
+    <path d="m160 519-13 16m43-11 8 24m-25-36 2-21"/>
+  </g>
+  <g fill="#F6CE68" stroke="#292A25" stroke-width="7" stroke-linejoin="round">
+    <path d="m75 360 16 34 37 1-27 26 9 37-35-18-32 18 7-38-27-25 37-1Z"/>
+  </g>
+  <path d="M72 404q15 11 29-2" stroke="#292A25" stroke-width="4" fill="none"
+    stroke-linecap="round"/>
+  <g fill="#292A25"><circle cx="56" cy="406" r="3"/><circle cx="91" cy="405" r="3"/></g>
+  <path d="M579 113q17-32 31-8m-42 34q33-5 37 19" fill="none" stroke="#292A25"
+    stroke-width="5" stroke-linecap="round"/>
+  <path d="M554 518q20-9 28 10m-7 17q15 4 22-9" fill="none" stroke="#D47B5C"
+    stroke-width="6" stroke-linecap="round"/>
+</svg>

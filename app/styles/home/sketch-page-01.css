@@ -1,0 +1,236 @@
+/* The Endless Sketchpage. Homepage-only styles. No marketing cards or gradients. */
+
+.world {
+  --world-paper: #faf8f1;
+  --world-ink: #292a25;
+  --world-soft-ink: #5e5c52;
+  --world-red: #df6f52;
+  --world-blue: #426ed6;
+  --world-mint: #319078;
+  --world-edge: #b8b3a6;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: var(--world-paper);
+  color: var(--world-ink);
+  background-image: url('/art/paper-dots.svg');
+  background-size: 21px 21px;
+}
+
+/* A small self-hosted SVG dot tile gives the page its printed-paper texture. */
+
+.world-paper-grain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #faf8f1;
+  opacity: 0.06;
+}
+
+.world-width {
+  width: min(1200px, calc(100% - 112px));
+  margin-inline: auto;
+}
+
+.world button {
+  color: inherit;
+}
+
+.world h1,
+.world h2,
+.world h3,
+.world p {
+  margin: 0;
+}
+
+.world em {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.world-index,
+.world-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ad5f49;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 2.1px;
+  line-height: 1.5;
+}
+
+.world-header {
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  position: relative;
+  z-index: 10;
+}
+
+.world-logo,
+.world-nav,
+.world-nav-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.world-logo {
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 850;
+  letter-spacing: -1.2px;
+}
+
+.world-logo-mark {
+  width: 48px;
+  height: 40px;
+}
+
+.world-logo-accent,
+.world-footer-brand span {
+  color: var(--world-red);
+}
+
+.world-logo i {
+  color: #248973;
+  font-size: 11px;
+  font-style: normal;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.world-nav {
+  gap: clamp(17px, 2.8vw, 42px);
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.world-nav a {
+  position: relative;
+  padding: 8px 0;
+}
+
+.world-nav a::after,
+.world-text-link::after {
+  content: '';
+  height: 2px;
+  background: var(--world-red);
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 100%;
+  transition: right 0.2s ease;
+}
+
+.world-nav a:hover::after,
+.world-nav a:focus-visible::after,
+.world-text-link:hover::after,
+.world-text-link:focus-visible::after {
+  right: 0;
+}
+
+.world-nav-button,
+.world-ink-button {
+  border: none;
+  background: var(--world-ink);
+  color: #fffefa !important;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.world-nav-button {
+  padding: 14px 19px;
+  border-radius: 47% 53% 45% 55% / 15% 13% 17% 14%;
+  transform: rotate(-2deg);
+}
+
+.world-nav-button:hover,
+.world-ink-button:hover {
+  box-shadow: 4px 5px 0 #e5b28c;
+  transform: translateY(-3px) rotate(0deg);
+}
+
+.world-hero {
+  min-height: 645px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  align-items: center;
+  padding: 40px 0 96px;
+}
+
+.world-hero-copy {
+  align-self: center;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 23px;
+}
+
+.world-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--world-red);
+}
+
+.world-hero h1 {
+  font-size: clamp(66px, 7.1vw, 110px);
+  line-height: 0.97;
+  letter-spacing: -7px;
+  font-weight: 900;
+  margin: 29px 0 28px;
+  max-width: 700px;
+}
+
+.world-hero h1 em {
+  position: relative;
+  display: inline-block;
+  color: var(--world-red);
+  font-size: 1.17em;
+  font-weight: 400;
+  letter-spacing: -7px;
+  line-height: 0.99;
+}
+
+.world-hero h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 2%;
+  width: 99%;
+  height: 14px;
+  background: url('/art/world/underline.svg') center / 100% 100% no-repeat;
+}
+
+.world-hero-description {
+  max-width: 460px;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.58;
+  color: #55564d;
+}
+
+.world-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  flex-wrap: wrap;
+  margin-top: 29px;
+}
+
+.world-ink-button {
+  border-radius: 39% 43% 35% 38% / 13% 11% 13% 14%;
+  padding: 19px 26px;
+  font-size: 16px;
+  transform: rotate(-2deg);
+}

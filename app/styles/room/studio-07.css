@@ -1,0 +1,62 @@
+@media (max-width: 650px) {
+  .studio .tool-rail { width: calc(100vw - 16px); }
+}
+
+/* Keep resize handles visible while scrolling the drawers' contents. */
+
+.studio .scrapbook-properties {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.studio .maker-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+.studio .maker-scroll::-webkit-scrollbar,
+.studio .rail-scroll::-webkit-scrollbar { display: none; }
+
+.studio .tool-rail { overflow: visible; }
+
+.studio .rail-scroll {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+.studio .studio-resize-grip { position: relative; margin-top: 7px; }
+
+@media (max-width: 650px) {
+  .studio .rail-scroll { flex-direction: row; overflow-x: auto; overflow-y: hidden; }
+  .studio .scrapbook-properties { max-height: calc(100dvh - 160px); }
+}
+
+/* Widen the tool tray to reveal an additional column; narrowing restores one. */
+
+@media (min-width: 651px) {
+  .studio .rail-scroll {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    align-content: start;
+    justify-items: center;
+  }
+  .studio .rail-scroll .rail-divider { grid-column: 1 / -1; width: 100%; }
+  .studio .tool-rail {
+    height: min(var(--rail-height, 520px), calc(100% - 24px));
+    max-height: calc(100% - 24px);
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Glowing jellyfish idea</title>
+  <g stroke="#3C3552" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 101C33 47 62 23 99 23s68 24 67 78q-17 24-34 3-16 19-33 0-16 18-32 1-16 20-33-4Z" fill="#C6B9F0" stroke-width="5"/>
+    <path d="M50 91q0-51 43-51" fill="none" stroke="#EDE8FA" stroke-width="8"/>
+    <path d="M57 111q-10 15 4 28t-4 26M83 112q10 21-1 39t9 28M108 116q-14 19 0 38t-4 23M135 110q10 21-4 35t9 25" fill="none" stroke-width="5"/>
+    <ellipse cx="79" cy="83" rx="5" ry="7" fill="#3C3552" stroke="none"/>
+    <ellipse cx="119" cy="83" rx="5" ry="7" fill="#3C3552" stroke="none"/>
+    <path d="M91 97q8 9 16 0" fill="none" stroke-width="3"/>
+    <ellipse cx="62" cy="96" rx="10" ry="5" fill="#F2ADC3" stroke="none"/>
+    <ellipse cx="137" cy="96" rx="10" ry="5" fill="#F2ADC3" stroke="none"/>
+  </g>
+  <g fill="#F8CC5C" stroke="#514368" stroke-width="2">
+    <path d="m173 38 4-11 4 11 11 4-11 4-4 11-4-11-11-4Z"/>
+    <path d="m20 43 3-8 3 8 8 3-8 3-3 8-3-8-8-3Z"/>
+  </g>
+</svg>

@@ -1,0 +1,147 @@
+.world-pad-tools,
+.world-pad-inks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.world-tool-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-right: 8px;
+  color: #ab6a54;
+}
+
+.world-pad-tools button {
+  width: 42px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: 11px;
+  font-size: 29px;
+  padding: 0;
+}
+
+.world-buddy-tool {
+  display: block;
+  height: 31px;
+  width: 31px;
+  object-fit: contain;
+}
+
+.world-pad-tools button.is-picked {
+  background: #f8d996;
+  border-color: #d4a24e;
+  transform: rotate(-5deg);
+}
+
+.world-pad-inks button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 45% 55% 58% 42%;
+  transition: transform 0.18s;
+}
+
+.world-pad-inks button.is-picked {
+  outline: 2px solid var(--world-ink);
+  outline-offset: 3px;
+  transform: scale(1.08) rotate(-10deg);
+}
+
+.world-pad-clear,
+.world-pad-touch-off {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.world-pad-touch-off {
+  color: #71695f !important;
+}
+
+.world-pad-footnote {
+  text-align: right;
+  color: #746f63;
+  font-size: 12px;
+  margin: 7px 20px 0 !important;
+  font-style: italic;
+}
+
+.world-hero-comet {
+  position: absolute;
+  z-index: 1;
+  top: 8%;
+  right: -4%;
+  width: 88px;
+  pointer-events: none;
+  transform: rotate(16deg);
+}
+
+@media (max-width: 760px) {
+  .world-hero-comet {
+    width: 58px;
+    right: 1%;
+    top: 8%;
+  }
+}
+
+/* Share fields display the generated address even when clipboard access fails. */
+
+.world-invite-result {
+  display: grid;
+  gap: 8px;
+  max-width: 620px;
+  margin: 18px 0;
+  font-weight: 650;
+}
+
+.world-invite-result input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #928b7c;
+  border-radius: 8px;
+  background: #fffdf7;
+  color: #25231f;
+  font: 0.85rem ui-monospace, SFMono-Regular, monospace;
+}
+
+.world-invite-result small { font-size: 0.8rem; font-weight: 400; }
+
+/* Cloud creation errors must remain visible instead of silently opening local mode. */
+
+.world-cloud-error {
+  position: fixed;
+  z-index: 100;
+  bottom: 16px;
+  right: 16px;
+  max-width: min(440px, calc(100vw - 32px));
+  margin: 0;
+  padding: 18px 24px;
+  border: 2px dashed #bd5c43;
+  border-radius: 16px;
+  background: #fff5e8;
+  color: #382d27;
+}
+
+.world-cloud-error p { margin: 0 0 12px; }
+
+.world-cloud-error button {
+  margin: 0 10px 8px 0;
+  padding: 10px 14px;
+  border: 1px solid #403830;
+  border-radius: 8px;
+  background: #fffdf8;
+  color: #28231d;
+  cursor: pointer;
+}
