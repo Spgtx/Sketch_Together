@@ -258,10 +258,15 @@ export function useRoomVectorTools(scope: ReturnType<typeof import('./room-base'
         notify('Select multiple objects or an existing group to make a component.');
         return;
       }
+      const componentGroup = object as Group & Obj;
       const name = `Creative piece ${components.length + 1}`;
       const id = crypto.randomUUID();
-      object.component = { id, name, kind: 'master' };
-      const item: SavedComponent = { id, name, data: serialize(object) };
+      componentGroup.component = { id, name, kind: 'master' };
+      const item: SavedComponent = {
+        id,
+        name,
+        data: serialize(componentGroup),
+      };
       const next = [...components, item].slice(-40);
       try {
         localStorage.setItem('sketch:components', JSON.stringify(next));
@@ -270,8 +275,8 @@ export function useRoomVectorTools(scope: ReturnType<typeof import('./room-base'
         return;
       }
       setComponents(next);
-      setSelectedComponent(object.component);
-      commit('modify', object);
+      setSelectedComponent(componentGroup.component);
+      commit('modify', componentGroup);
       notify('Saved to your component shelf. You can place more copies.');
     }, [commit, components, groupSelected, notify]);
   
@@ -281,10 +286,19 @@ export function useRoomVectorTools(scope: ReturnType<typeof import('./room-base'
       try {
         const result = await util.enlivenObjects<Obj>([item.data]);
         const object = result[0];
-        if (!(object instanceof Group)) throw new Error('Component is no longer a group');
-        object.id = crypto.randomUUID();
-        object.getObjects().forEach((child) => { (child as Obj).id = crypto.randomUUID(); });
-        object.component = { id: item.id, name: item.name, kind: 'instance' };
+        if (!(object instanceof Group)) {
+          throw new Error('Component is no longer a group');
+        }
+        const componentGroup = object as Group & Obj;
+        componentGroup.id = crypto.randomUUID();
+        componentGroup.getObjects().forEach((child) => {
+          (child as Obj).id = crypto.randomUUID();
+        });
+        componentGroup.component = {
+          id: item.id,
+          name: item.name,
+          kind: 'instance',
+        };
         object.set({ left: 170, top: 140, visible: true });
         object.setCoords();
         silentRef.current = true;
@@ -293,7 +307,7 @@ export function useRoomVectorTools(scope: ReturnType<typeof import('./room-base'
         canvas.setActiveObject(object);
         canvas.requestRenderAll();
         commit('add', object);
-        setSelectedComponent(object.component);
+        setSelectedComponent(componentGroup.component);
       } catch {
         silentRef.current = false;
         notify('Could not place that component.');

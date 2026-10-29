@@ -293,7 +293,9 @@ export function useRoomCanvasLifecycle(scope: ReturnType<typeof import('./room-b
           makeChange('modify', replacement);
           return;
         }
-        if (curve.penNodes?.length && curve instanceof Path) {
+        const penNodes = curve.penNodes;
+        const penClosed = curve.penClosed;
+        if (penNodes?.length && curve instanceof Path) {
           const matrix = curve.calcTransformMatrix();
           const transformNode = (node: VectorPoint): VectorPoint => {
             const result = util.transformPoint(new Point(
@@ -302,12 +304,12 @@ export function useRoomCanvasLifecycle(scope: ReturnType<typeof import('./room-b
             ), matrix);
             return { x: result.x, y: result.y };
           };
-          const nodes = curve.penNodes.map((node) => ({
+          const nodes = penNodes.map((node) => ({
             ...transformNode(node),
             ...(node.incoming && { incoming: transformNode(node.incoming) }),
             ...(node.outgoing && { outgoing: transformNode(node.outgoing) }),
           }));
-          const replacement = penObject(nodes, curve, curve.penClosed);
+          const replacement = penObject(nodes, curve, penClosed);
           const index = canvas.getObjects().indexOf(curve);
           if (index < 0) return;
           silentRef.current = true;

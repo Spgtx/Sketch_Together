@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <title>SKTO Studio</title>
+  <rect x="3" y="3" width="90" height="90" rx="25" fill="#F6F1E5"/>
+  <path d="M26 31c8-12 28-16 37-6 12 13-30 18-30 32 0 16 26 16 39 3"
+    fill="none" stroke="#292725" stroke-width="9" stroke-linecap="round"/>
+  <path d="M64 68l9 8" stroke="#DF7056" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="23" cy="69" r="5" fill="#84B99C"/>
+</svg>

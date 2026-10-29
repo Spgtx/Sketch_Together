@@ -87,8 +87,8 @@ function approximatePath(path: Path): Ring[] {
     current = [];
   };
   for (const segment of path.path) {
-    const [command, ...values] = segment;
-    const v = values as number[];
+    const command: string = segment[0];
+    const v = segment.slice(1) as number[];
     if (command === 'M') {
       finish();
       cursor = [v[0], v[1]];
